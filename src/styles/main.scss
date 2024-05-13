@@ -1,0 +1,6 @@
+@use 'vuetify' with (
+    $list-item-subtitle-font-size: 2px,
+    $list-background: 'red',
+    $app-bar-background: 'red',
+    $body-font-family: 'Oxygen'
+);
