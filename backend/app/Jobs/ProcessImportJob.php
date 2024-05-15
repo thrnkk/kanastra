@@ -68,7 +68,6 @@ class ProcessImportJob implements ShouldQueue
             ['status' => 2, 'rows' => $line, 'execution' => $executionTime]
         );
 
-
         fclose($fileStream);
         unlink($path);
     }

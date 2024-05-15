@@ -37,6 +37,8 @@ class FileProcessService
                 continue;
             }
 
+            // TODO: gerar boleto
+            // TODO: disparar e-mail
 
             $line += 1;
         }

@@ -26,18 +26,12 @@ class ProcessChargeImportJob implements ShouldQueue
      */
     public function handle(): void
     {
-        // try {
-        //     Product::updateOrCreate(
-        //         ['name' => $this->rowData[$this->mapping['name']], 'category_id' => $category->id],
-        //         [
-        //             'description' => $this->rowData[$this->mapping['description']],
-        //             'price' => $this->rowData[$this->mapping['price']],
-        //             'stock_left' => $this->rowData[$this->mapping['stock']],
-        //         ]
-        //     );
-        // } catch (\Exception $e) {
-        //     Log::error($e->getMessage());
-        //     Log::info(json_encode($this->rowData));
-        // }
+        try {
+            // TODO: gerar boleto
+            // TODO: disparar e-mail
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            Log::info(json_encode($this->rowData));
+        }
     }
 }
