@@ -9,10 +9,9 @@ services:
         - 8000:8000
     volumes:
         - ./backend:/var/www:cached
-    command: "php artisan serve --host=0.0.0.0 --port=8000"
-  # bash -c "composer install"
-  # && php artisan migrate
-  # && php artisan serve --host=0.0.0.0 --port=8000"
+    command: bash -c "composer install \
+      && php artisan migrate \
+      && php artisan serve --host=0.0.0.0 --port=8000"
 
   frontend:
     build:
@@ -25,7 +24,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+    command: bash -c "npm run dev -- --host 0.0.0.0"
 
   db:
     image: mysql:5.7
