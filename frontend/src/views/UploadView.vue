@@ -96,7 +96,7 @@ export default {
             file: null,
             uploading: false,
             validTypes: ['text/csv'],
-            maximumSize: 1
+            maximumSize: 150
         }
     },
     methods: {
