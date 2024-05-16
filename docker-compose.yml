@@ -24,7 +24,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-    command: bash -c "npm run dev -- --host 0.0.0.0"
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 
   db:
     image: mysql:5.7
